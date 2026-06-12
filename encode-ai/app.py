@@ -1,5 +1,6 @@
 import sqlite3
 from flask import Flask, render_template, request, redirect, session
+import database
 app = Flask(__name__)
 app.secret_key="encode_ai_secret_key"
 
