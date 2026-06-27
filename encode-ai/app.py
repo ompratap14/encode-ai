@@ -28,7 +28,7 @@ def send_email(name, email, company, service, message):
         json={
             "from": "onboarding@resend.dev",
             "to": ["surjeetsolanki51@gmail.com"],
-            "subject": "New Lead - Encode AI Solutions",
+            "subject": "New Lead - We Take Forward (WTF) Solutions",
             "html": f"""
             <h2>New Lead Received</h2>
 
