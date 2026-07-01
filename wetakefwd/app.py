@@ -4,12 +4,22 @@ from email.mime.text import MIMEText
 from flask import Flask, render_template, request, redirect, session
 import os
 import requests
+from flask import send_from_directory
+
+
 
 RESEND_API_KEY = os.getenv("RESEND_API_KEY")
 
 import database
 
 app = Flask(__name__)
+@app.route('/sitemap.xml')
+def sitemap():
+    return send_from_directory('static', 'sitemap.xml')
+
+@app.route('/robots.txt')
+def robots():
+    return send_from_directory('static', 'robots.txt')
 app.secret_key = "encode_ai_secret_key"
 
 EMAIL_ADDRESS = "wetakefwd@gmail.com"
